@@ -1,8 +1,8 @@
 package challenges;
 
+import input.Fichier;
+
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -29,8 +29,7 @@ public class Day01 {
     public static void main(String[] args) {
         try {
             //PREPARE DATA
-            File file = new File(Day01.class.getResource("day01").getFile());
-            BufferedReader brTest = new BufferedReader(new FileReader(file));
+            BufferedReader brTest = Fichier.reader("day01");
             String inputLine = brTest.readLine();
 
             String[] instructions = inputLine.split(",");
